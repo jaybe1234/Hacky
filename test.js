@@ -10,7 +10,7 @@ var quizBoxText = document.getElementById("quizBox");
 var answerBoxText = document.getElementById("answerBox");
 //var randomNum = Math.floor((Math.random() * 5) );
 //console.log(randomNum)
-showQuestion();
+//showQuestion();
 //console.log("hi")
 //console.log(questionArray);
 //document.getElementById("kkk").innerHTML = 5 + 6;
@@ -40,6 +40,10 @@ function answer(n){
   console.log(answerArray[n]);
 }, 5000);
   
+
+ function printX(){
+  return "winner";
+ } 
 }
 //แสดงข้อมูลในนั้น
   /*var data = firebase.database().ref("User");

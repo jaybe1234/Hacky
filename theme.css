@@ -15,7 +15,7 @@
 .btn:active{
 	background-color: green;
 }
-.choise{
+.choice{
 	display: inline-block;
 	border: 2px solid darkblue;
 	padding: 5px 50px;
@@ -25,11 +25,11 @@
 	border-radius: 10px;
 	transition: 0.1s;
 }
-.choise:hover{
+.choice:hover{
 	background-color: darkblue;
 	color: blue;
 }
-.choise:active{
+.choice:active{
 	background-color: red;
 }
 .in{
