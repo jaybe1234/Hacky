@@ -13,8 +13,8 @@ getQuiztoArray();
 //สำหรับส่งค่าขึ้น firebase
 function saveOnClick()  
       {
-        var questionText = document.getElementById("question");
-        var answerText = document.getElementById("answer");
+        var questionText = document.getElementById("questionCreate");
+        var answerText = document.getElementById("answerCreate");
         insertData(questionText.value,answerText.value);
       }
 function insertData(question,answer){
@@ -94,48 +94,13 @@ function showData(){
 
 
 
-//play
-
-var questionArray = [];
-var answerArray = [];
-//getDataToArray();
 
 
 function random(n){
   return Math.floor(Math.random()*n);
 }
 
-function getQuestionToArray(){
-  var rootRef = firebase.database().ref().child("User")
-  rootRef.on("child_added", snap=> {
-    var question = snap.child("question").val();
-    //console.log("question is " + question);
-    //console.log("answer is " + answer);
-    questionArray.push(question);
-    //console.log(questionArray);
-    //console.log("length is "+questionArray.length)
-    return questionArray;
-})
-}
-function getAnswerToArray(){
-  var rootRef = firebase.database().ref().child("User")
-  rootRef.on("child_added", snap=> {
 
-    var answer = snap.child("answer").val();
-    //console.log("question is " + question);
-    //console.log("answer is " + answer);
-    answerArray.push(answer);
-    //console.log(questionArray);
-    //console.log("length is "+questionArray.length)
-    return answerArray;
-})
-}
-
-
-function abc()
-{
-   console.log('abc');
-}
 
 
 
