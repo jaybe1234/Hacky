@@ -8,12 +8,7 @@ var answerArray=[];
 
 var quizBoxText = document.getElementById("quizBox");
 var answerBoxText = document.getElementById("answerBox");
-//var randomNum = Math.floor((Math.random() * 5) );
-//console.log(randomNum)
-//showQuestion();
-//console.log("hi")
-//console.log(questionArray);
-//document.getElementById("kkk").innerHTML = 5 + 6;
+
 setTimeout(function() {
   console.log("async");
   console.log(questionArray);
@@ -114,6 +109,72 @@ function insertData(question,answer){
     answer: answer
   });
   console.log("Insert Success");
+}
+
+//play
+
+var questionArray = [];
+var answerArray = [];
+//getDataToArray();
+
+
+
+
+function printX(x){
+  //printNext();
+  console.log(x);
+}
+
+
+
+function printAnswer(){
+  console.log("เฉลย");
+}
+
+function printNext(){
+  console.log("ไปต่อ");
+}
+
+
+function giveStr(){
+  return "kero kero";
+}
+
+
+function random(n){
+  return Math.floor(Math.random()*n);
+}
+
+function getQuestionToArray(){
+  var rootRef = firebase.database().ref().child("User")
+  rootRef.on("child_added", snap=> {
+    var question = snap.child("question").val();
+    //console.log("question is " + question);
+    //console.log("answer is " + answer);
+    questionArray.push(question);
+    //console.log(questionArray);
+    //console.log("length is "+questionArray.length)
+    return questionArray;
+})
+}
+function getAnswerToArray(){
+  var rootRef = firebase.database().ref().child("User")
+  rootRef.on("child_added", snap=> {
+
+    var answer = snap.child("answer").val();
+    //console.log("question is " + question);
+    //console.log("answer is " + answer);
+    answerArray.push(answer);
+    //console.log(questionArray);
+    //console.log("length is "+questionArray.length)
+    return answerArray;
+})
+}
+
+
+function abc()
+{
+   console.log('abc');
 }
 
 
