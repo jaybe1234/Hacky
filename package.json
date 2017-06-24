@@ -21,7 +21,8 @@
   "description": "",
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "sw-toolbox": "^3.6.0"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
