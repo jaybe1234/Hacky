@@ -26,13 +26,13 @@
           authDomain: "testpwa-48814.firebaseapp.com",
           databaseURL: "https://testpwa-48814.firebaseio.com",
           projectId: "testpwa-48814",
-           messagingSenderId: "322789167425"
+          messagingSenderId: "322789167425"
         };
         firebase.initializeApp(config);
     </script>
 <form method="post" action="Menu.html">
-<br><br><br><br><br><br>Question : <br><br><input id="question" class="in" type="text">
-<br><br>Answer : <br><br><input id="answer" class="in" type="text">
+<br><br><br><br><br><br>Question : <br><br><input id="questionCreate" class="in" type="text">
+<br><br>Answer : <br><br><input id="answerCreate" class="in" type="text">
 <br><br><br>
 <script src="test.js"> 
 </script>
@@ -43,14 +43,15 @@ function fncConfirm1()
 {
 if(confirm("Confirm")==true)
 {
-saveOnClick();
-window.location = "Menu.html";
-save
+	saveOnClick();
+	window.location = "Menu.html";
+
 }
 }
+
 </script>
-<input  name="btnButton" type="submit" value="BACK TO MENU" OnClick="JavaScript:fncConfirm();" class="btn">
-<input name="btnButton1" type="button" value="SUBMIT" OnClick="JavaScript:fncConfirm1();" class="btn">
+<input  name="btnButton" type="submit" value="BACK TO MENU" OnClick=window.location = "Menu.html" class="btn">
+<input name="btnButton1" type="button" value="SUBMIT" OnClick="saveOnClick();" class="btn">
 </form>
 
 </body>
