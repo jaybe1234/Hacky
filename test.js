@@ -11,14 +11,36 @@ var answerBoxText = document.getElementById("answerBox");
 //var randomNum = Math.floor((Math.random() * 5) );
 //console.log(randomNum)
 showQuestion();
-console.log("hi")
-console.log(questionArray);
+//console.log("hi")
+//console.log(questionArray);
 //document.getElementById("kkk").innerHTML = 5 + 6;
 setTimeout(function() {
   console.log("async");
   console.log(questionArray);
 }, 5000);
+var n = randomNum(questionArray.length)
+showArray(n);
+answer(n);
 
+function randomNum(n){
+  return Math.floor(Math.random()*n)
+}
+
+
+function showArray(n){
+  setTimeout(function() {
+  console.log("It's running");
+  console.log(questionArray[n]);
+}, 5000);
+}
+
+
+function answer(n){
+  setTimeout(function() {
+  console.log(answerArray[n]);
+}, 5000);
+  
+}
 //แสดงข้อมูลในนั้น
   /*var data = firebase.database().ref("User");
   data.on('value',function(datasnapshot){
@@ -49,12 +71,12 @@ rootRef.on("child_added", snap=> {
   //console.log("answer is " + answer);
   questionArray.push(question);
   answerArray.push(answer);
-  console.log(questionArray);
-  console.log("length is "+questionArray.length)
-  var randomNum = Math.floor(Math.random()*(questionArray.length))
-  console.log(randomNum)
-  console.log(questionArray[randomNum]);
-  console.log(answerArray[randomNum]);
+  //console.log(questionArray);
+  //console.log("length is "+questionArray.length)
+  //var randomNum = Math.floor(Math.random()*(questionArray.length))
+  //console.log(randomNum)
+  //console.log(questionArray[randomNum]);
+  //console.log(answerArray[randomNum]);
 })
   
 }
