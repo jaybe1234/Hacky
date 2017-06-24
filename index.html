@@ -1,57 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>firebase</title>
-    <link type="text/css" rel="stylesheet" href="stylesheet.css"> </link>
-    <link rel="manifest" href="/icon/manifest.json">
-    <!-- add to homescreen for ios-->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="pwa">
-    <link rel="apple-touch-icon" href="/icon/anonymous_mask1600.png">
+<head>
+  <meta charset="UTF-8">
+  <title>Smoody</title>
+  <link rel="stylesheet" type="text/css" href="theme.css">
+  <style>
+    body {
+      background-color: #9999FF;
+      color: darkblue;
+      font-family: Arial;
+      font-size: 24px;
+      text-align: center;
+    }
 
-  </head>
-  <body>  
-    <h1>Create Quiz</h1>
-    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-          apiKey: "AIzaSyAg8GIjJvg_vznZ3Y52OrmBs115BKAYqOA",
-          authDomain: "testpwa-48814.firebaseapp.com",
-          databaseURL: "https://testpwa-48814.firebaseio.com",
-          projectId: "testpwa-48814",
-           messagingSenderId: "322789167425"
-        };
-        firebase.initializeApp(config);
-    </script>
-      
-    <script src="test.js"></script>
-    <form action="/action_page.php">
-        <input id="question" type="text" name="question" placeholder="Question"><br>
-        <input id="answer" type="text" name="answer" placeholder="Answer"><br>
-        <button type="button" onclick="saveOnClick()">Submit</button>
-    </form> 
-    <p id="kkk"></p>
-    <script>
-//document.getElementById("kkk").innerHTML = 5 + 6;
-</script>
-    <a href="quiz.html">Start</a>
-    <style>
-      a{
-        font-size: 20px
-        color: red;
-      }
-    </style>
-    <!--p id="demo"></p>
-    
-<script>
-var firebaseRef = firebase.database().ref();
-  firebaseRef.once('value').then(function(datasnapshot){
-    console.log(datasnapshot.val());
-    //document.getElementById("demo").innerHTML = datasnapshot.val("question");
-  })
-</script-->
-
-  </body>
+  </style>
+</head>
+<body>
+  <br><br><br><br><br><br><br><br>
+  <b style="font-size: 70px;">SMOODY</b>
+  <br><br><br><b><a href="Menu.html" class="btn" style="background-color: none;">START</a></b>
+</body>
 </html>
