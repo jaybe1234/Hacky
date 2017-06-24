@@ -1,0 +1,12 @@
+{
+  "short_name": "Smody",
+  "name": "Smody",
+  "icons": [
+    {
+      "src": "anonymous_mask1600.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    }
+  ],
+  "start_url": "/index.html"
+}
