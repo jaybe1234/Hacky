@@ -1,50 +1,51 @@
-
-var questionText = document.getElementById("question")
-var answerText = document.getElementById("answer")
-var text = document.getElementById("kkk")
-var questionArray=[];
-var answerArray=[];
-//console.log(questionArray);
-
-var quizBoxText = document.getElementById("quizBox");
-var answerBoxText = document.getElementById("answerBox");
+/*
+var questionArray = [];
+var answerArray = [];
 
 setTimeout(function() {
   console.log("async");
   console.log(questionArray);
-}, 5000);
-var n = randomNum(questionArray.length)
-showArray(n);
-answer(n);
+}, 3000);
+getQuiztoArray();
 
+*/
+
+//สำหรับส่งค่าขึ้น firebase
+function saveOnClick()  
+      {
+        var questionText = document.getElementById("question");
+        var answerText = document.getElementById("answer");
+        insertData(questionText.value,answerText.value);
+      }
+function insertData(question,answer){
+  var firebaseRef = firebase.database().ref("User");
+  firebaseRef.push({
+    question: question,
+    answer: answer
+  });
+  console.log("Insert Success");
+}
+/*
 function randomNum(n){
   return Math.floor(Math.random()*n)
 }
-
-
-function showArray(n){
-  setTimeout(function() {
-  console.log("It's running");
-  console.log(questionArray[n]);
-}, 5000);
+function showQuestion(n){
+  return questionArray(n);
+}
+function showAnswer(n){
+  return answerArray(n);
+}
+function getQuiztoArray(){
+  var rootRef = firebase.database().ref().child("User")
+  rootRef.on("child_added", snap=> {
+  var question = snap.child("question").val();
+  var answer = snap.child("answer").val();
+  //questionArray.push(question);
+  //answerArray.push(answer);
+})
 }
 
-
-function answer(n){
-  setTimeout(function() {
-  console.log(answerArray[n]);
-}, 5000);
-  
-
- function printX(){
-  return "winner";
- } 
-}
-//แสดงข้อมูลในนั้น
-  /*var data = firebase.database().ref("User");
-  data.on('value',function(datasnapshot){
-    kkk.innerText = datasnapshot;
-  })*/
+*/
 
 /*var rootRef = firebase.database().ref().child("User")
 rootRef.on("child_added", snap=> {
@@ -79,18 +80,7 @@ rootRef.on("child_added", snap=> {
 })
   
 }
-function showAnswer(number){
 
-}
-
-
-
-function saveOnClick()  
-      {
-        var questionText = document.getElementById("question");
-        var answerText = document.getElementById("answer");
-        insertData(questionText.value,answerText.value);
-      }
 
 
 function showData(){
@@ -102,43 +92,13 @@ function showData(){
 }
 
 
-function insertData(question,answer){
-  var firebaseRef = firebase.database().ref("User");
-  firebaseRef.push({
-    question: question,
-    answer: answer
-  });
-  console.log("Insert Success");
-}
+
 
 //play
 
 var questionArray = [];
 var answerArray = [];
 //getDataToArray();
-
-
-
-
-function printX(x){
-  //printNext();
-  console.log(x);
-}
-
-
-
-function printAnswer(){
-  console.log("เฉลย");
-}
-
-function printNext(){
-  console.log("ไปต่อ");
-}
-
-
-function giveStr(){
-  return "kero kero";
-}
 
 
 function random(n){

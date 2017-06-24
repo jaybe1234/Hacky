@@ -32,14 +32,65 @@
 
 
 	<br><br><h1 id = "question" style="font-size: 40px;"></h1>
-	<script>
-		document.getElementById("question").innerHTML = random(10);
-	</script>
+
 	<br><br><br><br>
 
-	<input name="btnButton" type="button" value="เฉลย" OnClick="printAnswer();" class="btn">
-	<input name="btnButton1" type="button" value="ไปต่อ" OnClick="printNext();" class="btn">
-	<br><br><br>คำตอบ
-	<br><br><br><a href="Menu.html" class="choice" onclick="window.location = "Menu.html">BACK TO MENU</a>
+	<input name="btnButton" type="button" value="เฉลย" OnClick="showAnswer();" class="btn">
+	<input name="btnButton1" type="button" value="ไปต่อ" OnClick="changeQuestion();" class="btn">
+	<br><br><h1 id ="answer" style="font-size: 40px;">คำตอบ</h1>
+	<br><br><br>
+	<a href="Menu.html" class="choice" onclick="window.location= "Menu.html"">BACK TO MENU</a>
+		<script>
+			var questionArray = [];
+			var answerArray = [];
+			var answer = "hello";
+			setTimeout(function() {
+			  console.log("async");
+			  console.log(questionArray);
+			  console.log(answerArray);
+			}, 3000);
+			getQuiztoArray();
+
+			function getQuiztoArray(){
+		  	var rootRef = firebase.database().ref().child("User")
+			rootRef.on("child_added", snap=> {
+			var question = snap.child("question").val();
+			var answer = snap.child("answer").val();
+			questionArray.push(question);
+			answerArray.push(answer);
+			})
+			}
+
+			function randomNum(n){
+			  return Math.floor(Math.random()*n)
+			}
+			function showQuestion(n){
+			  return questionArray[n];
+			}
+			function showAnswer(n){
+			  return answerArray[n];
+			}
+			setTimeout(function() {
+			  	var n = randomNum(questionArray.length);
+				console.log("n is "+n);
+				document.getElementById("question").innerHTML = showQuestion(n);
+				answer = answerArray[n];
+				console.log("answer = "+answer);
+			}, 3000);
+			
+			
+			function showAnswer(){
+				document.getElementById("answer").innerHTML = answer;
+			}
+			function changeQuestion(){
+				n = randomNum(questionArray.length);
+				console.log("n is "+n);
+				document.getElementById("question").innerHTML = showQuestion(n);
+				answer = answerArray[n];
+				console.log("answer = "+answer);
+
+
+		}
+	</script>
 </body>
 </html
