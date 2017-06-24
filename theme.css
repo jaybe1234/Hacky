@@ -1,0 +1,41 @@
+.btn{
+	display: inline-block;
+	border: 2px solid darkblue;
+	padding: 5px 10px;
+	background-color: #E0FFFF;
+	text-decoration: none;
+	color: darkblue;
+	border-radius: 0px;
+	transition: 0.1s;
+}
+.btn:hover{
+	background-color: darkblue;
+	color: blue;
+}
+.btn:active{
+	background-color: green;
+}
+.choise{
+	display: inline-block;
+	border: 2px solid darkblue;
+	padding: 5px 50px;
+	background-color: #E0FFFF;
+	text-decoration: none;
+	color: darkblue;
+	border-radius: 10px;
+	transition: 0.1s;
+}
+.choise:hover{
+	background-color: darkblue;
+	color: blue;
+}
+.choise:active{
+	background-color: red;
+}
+.in{
+	border:2px 
+	solid #456879;
+	border-radius:10px;
+	height: 30px;
+	width: 250px;>
+}
