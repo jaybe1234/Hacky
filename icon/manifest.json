@@ -5,7 +5,22 @@
     {
       "src": "anonymous_mask1600.png",
       "type": "image/png",
-      "sizes": "48x48"
+      "sizes": "1600x1600"
+    },
+    {
+      "src": "rsz_1anonymous_mask1600.png",
+      "type": "image/png",
+      "sizes": "200x200"
+    },
+    {
+      "src": "rsz_1rsz_1anonymous_mask1600.png",
+      "type": "image/png",
+      "sizes": "100x100"
+    },
+    {
+      "src": "rsz_1rsz_1rsz_1anonymous_mask1600.png",
+      "type": "image/png",
+      "sizes": "50x50"
     }
   ],
   "start_url": "/index.html",
