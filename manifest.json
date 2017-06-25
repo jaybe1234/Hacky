@@ -3,22 +3,22 @@
   "name": "Smody",
   "icons": [
     {
-      "src": "anonymous_mask1600.png",
+      "src": "/icon/anonymous_mask1600.png",
       "type": "image/png",
       "sizes": "1600x1600"
     },
     {
-      "src": "rsz_1anonymous_mask1600.png",
+      "src": "/icon/rsz_1anonymous_mask1600.png",
       "type": "image/png",
       "sizes": "200x200"
     },
     {
-      "src": "rsz_1rsz_1anonymous_mask1600.png",
+      "src": "/icon/rsz_1rsz_1anonymous_mask1600.png",
       "type": "image/png",
       "sizes": "100x100"
     },
     {
-      "src": "rsz_1rsz_1rsz_1anonymous_mask1600.png",
+      "src": "/icon/rsz_1rsz_1rsz_1anonymous_mask1600.png",
       "type": "image/png",
       "sizes": "50x50"
     }
